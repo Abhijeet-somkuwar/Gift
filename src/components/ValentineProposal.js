@@ -59,7 +59,7 @@ const ValentineProposal = () => {
     if (step === 3) {
       setPuzzle(shuffleArray([...puzzleQuestions]));
     }
-  }, [step]);
+  }, [step, puzzleQuestions]);
 
   useEffect(() => {
     if (hintCountdown === null) return;
@@ -195,10 +195,6 @@ const ValentineProposal = () => {
       zIndex: 0,
       colors: ['#ff6b9d', '#ff4d6d', '#ffa4c7', '#ffb6d9', '#ff85a9', '#ffd93d']
     };
-
-    function randomInRange(min, max) {
-      return Math.random() * (max - min) + min;
-    }
 
     const interval = setInterval(function() {
       const timeLeft = animationEnd - Date.now();
