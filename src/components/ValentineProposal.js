@@ -59,7 +59,7 @@ const ValentineProposal = () => {
     if (step === 3) {
       setPuzzle(shuffleArray([...puzzleQuestions]));
     }
-  }, [step, puzzleQuestions]);
+  }, [step]);
 
   useEffect(() => {
     if (hintCountdown === null) return;
